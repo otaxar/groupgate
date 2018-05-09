@@ -10,7 +10,7 @@ an option to rate the team members performance on the project.
 
 Pre-requisistes: Git, Vagrant and VirtualBox installed on your machine 
 
-1) in terminal: git clone git@csil-git1.cs.surrey.sfu.ca:ovalek/GG-final.git
+1) in terminal: git clone git@github.com:otaxar/groupgate.git
 
 2) in terminal: cd GG-final
 
@@ -35,7 +35,7 @@ NOTE: Please allow some time after the server starts.
             C) Validation for already existing course
 
 6) MyProfile > Reference profiles > Add, Delete:
-      —> NOTE: The profile link must be in the format http://www.websitename….
+      —> NOTE: The profile link must be in the format http://www.webname...
 
 7) Groups > Groups w/ Admin rights > Add/Edit/Delete
      —> NOTE: once there are group members added to the group, it is possible to rate the group members
@@ -112,7 +112,7 @@ emma@gmail.com
 Pass: 123
 
 ==> DOTO:
-1) Rework the token handling and security in general, remowe token when browser window closed. 
+1) Rework the token handling and security in general, remove token when browser window closed. 
 2) Implement Redux
 3) Implmenent Rails API (Load all user in single API Call after login)
 4) Rework the rating logic (more granular approach, allow selecting individual group members only)
