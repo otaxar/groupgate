@@ -1,0 +1,100 @@
+{
+  "name": "userdetail",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "username": {
+      "type": "string",
+      "required": true
+    },
+    "aboutMe": {
+      "type": "string"
+    },
+    "totalRating": {
+      "type": "number"
+    },
+    "numOfVotes": {
+      "type": "number"
+    },
+    "userId": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "coursesTaken": {
+      "type": "hasMany",
+      "model": "course",
+      "foreignKey": ""
+    },
+    "refsActive": {
+      "type": "hasMany",
+      "model": "ref",
+      "foreignKey": "userdetailId"
+    },
+    "groups": {
+      "type": "hasAndBelongsToMany",
+      "model": "group",
+      "foreignKey": "userdetailId"
+    },
+    "memberships": {
+      "type": "hasMany",
+      "model": "groupmember",
+      "foreignKey": "userId"
+    },
+    "members": {
+      "type": "hasMany",
+      "model": "member",
+      "foreignKey": "userdetailId"
+    },
+    "ratings": {
+      "type": "hasMany",
+      "model": "rating",
+      "foreignKey": "userdetailId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "find"
+    }
+
+  ],
+  "methods": {}
+}

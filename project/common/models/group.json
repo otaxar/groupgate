@@ -1,0 +1,90 @@
+{
+  "name": "group",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "descr": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "required": true
+    },
+    "course": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string",
+      "required": true
+    },
+    "rLock": {
+      "type": "boolean"
+    },
+    "url": {
+      "type": "string"
+    },
+    "git": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "userdetails": {
+      "type": "hasAndBelongsToMany",
+      "model": "userdetail",
+      "foreignKey": "userdetailId"
+    },
+    "members": {
+      "type": "hasMany",
+      "model": "member",
+      "foreignKey": "groupId"
+    },
+    "invites": {
+      "type": "hasMany",
+      "model": "invite",
+      "foreignKey": "groupId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "find"
+    }
+  ],
+  "methods": {}
+}
