@@ -6,6 +6,7 @@ GroupGate is an application that should help its users to find team members
 for their group projects. After the group project is finished, the user has
 an option to rate the team members performance on the project.
 
+
 ==>INSTALLATION:
 
 Pre-requisistes: Git, Vagrant and VirtualBox installed on your machine 
@@ -16,7 +17,7 @@ Pre-requisistes: Git, Vagrant and VirtualBox installed on your machine
 
 3) in terminal: vagrant up
 
-4) In web browser: http://localhost:4000
+4) In web browser: http://localhost:3000
 
 NOTE: Please allow some time after the server starts.
 
@@ -94,22 +95,9 @@ NOTE: Please allow some time after the server starts.
 ==>LIVE DEMO at: http://csil-cpu00.cs.surrey.sfu.ca:7105/
 (might get deleted via regular delete maintenance)
 
-==>ACCOUNTS:
+==> SCREENCAST DEMO: 
+https://www.youtube.com/watch?v=LWQqMRZ7CV8&t=841s
 
-albert@gmail.com
-Pass: 123
-
-ben@gmail.com
-Pass: 123
-
-charles@gmail.com
-Pass: 123
-
-daniela@gmail.com
-Pass: 123
-
-emma@gmail.com  
-Pass: 123
 
 ==> DOTO:
 1) Rework the token handling and security in general, remove token when browser window closed. 
