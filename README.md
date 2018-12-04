@@ -68,28 +68,25 @@ NOTE: Please allow some time after the server starts.
            
 ==>CURRENT ISSUES:
 
-1) After the first Login in the production build, the browser must be refreshed to display the User info. After that the info is displayed OK
+1) After the first Login in the production build, the browser must be refreshed to display the User info. After that the info is displayed OK.
     This does not happened in the Dev version. 
     Probably related to the async nature of setState().
     Possible solution(s): a) callback function to parent component
-                          b) use redux to store state
+                          b) use Redux to store state
 
 2) Some API calls get ‘unauthorized’ response when used for the first time, but working the next time.
-    - not sure if is is caused by the ACL not being granular enough, or by the async nature os setState()
+    - not sure if is is caused by the ACL not being granular enough, or by the async nature of setState()
 
 3) various small glitches in the system, most likely caused by the asynch nature of setState()
-    - possible solution: some of the errors were eliminated when calling the callback functions of the parent component from within the setState() fn.
-                                   Introduce redux package and handle the states in redux.
+    - possible solution: some of the errors were eliminated when calling the callback functions of the parent component from within the setState() fn. Introduce Redux package and handle the states in Redux.
    
 4) App currently does NOT  auto-logout the user if browser window is closed, or history cleared, creates a problem at the next reopen.
 
 5) In general, somewhat “naive” implementation. I doubt it would scale up well with large number of users. 
     Originally started with Rails API and was able to get all user info at once at the App level and pass the info down to various pages.
-    Then encountered some issues with update, that could not be quickly resolved, so I fell back on Loopback and the “component” loading, 
-     because the ease of setup.
+    Then encountered some issues with update, that could not be quickly resolved, so I fell back on Loopback and the “component” loading, because the ease of setup.
 
-6) vagrant halt current does not work (throws error).
-   using vagrant suspend and resume (or reload) instead  
+6) Vagrant halt currently does not work (throws error). Using vagrant suspend and resume (or reload) instead.  
  
 
 ==>LIVE DEMO at: http://csil-cpu00.cs.surrey.sfu.ca:7105/
