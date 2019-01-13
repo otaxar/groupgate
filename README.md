@@ -96,7 +96,7 @@ NOTE: Please allow some time after the server starts.
 https://www.youtube.com/watch?v=LWQqMRZ7CV8&t=841s
 
 
-==> DOTO:
+==> TODO:
 1) Rework the token handling and security in general, remove token when browser window closed. 
 2) Implement Redux
 3) Implmenent Rails API (Load all user in single API Call after login)
