@@ -2,14 +2,14 @@ GroupGate
 
 ==>INTRODUCTION:
 
-GroupGate is an application that should help its users to find team members 
+GroupGate is a web application that helps its users to find team members 
 for their group projects. After the group project is finished, the user has
 an option to rate the team members performance on the project.
 
 
 ==>INSTALLATION:
 
-Pre-requisistes: Git, Vagrant and VirtualBox installed on your machine 
+Pre-requisites: Git, Vagrant and VirtualBox installed on your machine 
 
 1) in terminal: git clone git@github.com:otaxar/groupgate.git
 
@@ -69,7 +69,7 @@ NOTE: Please allow some time after the server starts.
 ==>CURRENT ISSUES:
 
 1) After the first Login in the production build, the browser must be refreshed to display the User info. After that the info is displayed OK.
-    This does not happened in the Dev version. 
+    This does not happen in the Dev version. 
     Probably related to the async nature of setState().
     Possible solution(s): a) callback function to parent component
                           b) use Redux to store state
