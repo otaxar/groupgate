@@ -15,7 +15,7 @@
     "react-scripts": "1.1.4",
     "semantic-ui-css": "^2.3.1",
     "semantic-ui-react": "^0.79.1",
-    "validator": "^9.4.1"
+    "validator": "^13.7.0"
   },
   "scripts": {
     "start": "PORT=4000 react-scripts start",
